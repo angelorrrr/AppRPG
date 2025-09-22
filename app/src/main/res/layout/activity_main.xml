@@ -362,7 +362,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="668dp" />
+        app:layout_constraintGuide_percent="0.87" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hcg"
         android:layout_width="wrap_content"
@@ -370,6 +370,28 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5"
         />
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="177dp"
+        android:layout_height="72dp"
+        android:src="@drawable/attribute_circle"
+        app:layout_constraintBottom_toTopOf="@id/vcg"
+        app:layout_constraintEnd_toStartOf="@id/hcg" />
+    <TextView
+        android:id="@+id/pvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle1"
+        app:layout_constraintTop_toTopOf="@id/circle1"
+        app:layout_constraintBottom_toBottomOf="@id/circle1"
+        android:text="PV"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="27sp"
+        android:layout_marginStart="27dp"/>
+
+
 
     <ImageView
         android:id="@+id/nex_view"
