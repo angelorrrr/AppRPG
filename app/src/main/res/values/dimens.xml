@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "hex_side">
+        160dp
+    </dimen>
+    <dimen name="number_height">
+        20dp
+    </dimen>
+    <dimen name="text_height">
+        28dp
+    </dimen>
+    <dimen name="font_size">
+        53sp
+    </dimen>
+    <dimen name="text_size">
+        28sp
+    </dimen>
+    <dimen name="desc_size">
+        18sp
+    </dimen>
+</resources>

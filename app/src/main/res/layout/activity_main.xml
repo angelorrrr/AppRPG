@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.2"
+        android:contentDescription="sigilo instituto eleonora"
+        android:src="@drawable/ieji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintstart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/hexagono1"
+        android:layout_width="@dimen/hex_side"
+        android:layout_height="@dimen/hex_side"
+        android:src="@drawable/hexagon_image"
+
+        android:contentDescription="Hexágono 1"
+        app:layout_constraintBottom_toTopOf="@+id/character_image"
+        app:layout_constraintStart_toStartOf="@+id/character_image"
+        app:layout_constraintEnd_toEndOf="@+id/character_image"
+        android:layout_marginBottom="-25dp" />
+
+
+    <TextView
+        android:id="@+id/num_ag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:layout_marginTop="@dimen/number_height"
+        android:textSize="@dimen/font_size"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintBottom_toTopOf="@+id/ag_sig"
+        app:layout_constraintStart_toStartOf="@+id/hexagono1"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono1"
+        app:layout_constraintTop_toTopOf="@+id/hexagono1"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/ag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="agildade"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/desc_size"
+        app:layout_constraintBottom_toTopOf="@id/ag_sig"
+        android:layout_marginBottom="0dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_ag"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono1"
+        app:layout_constraintStart_toStartOf="@+id/hexagono1"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono1" />
+    <TextView
+        android:id="@+id/ag_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGI"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/text_size"
+        android:layout_marginBottom="@dimen/text_height"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_ag"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono1"
+        app:layout_constraintStart_toStartOf="@+id/hexagono1"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono1" />
+
+    <ImageView
+        android:id="@+id/hexagono2"
+        android:layout_width="@dimen/hex_side"
+        android:layout_height="@dimen/hex_side"
+        android:src="@drawable/hexagon_image"
+        android:contentDescription="Hexágono 2"
+        app:layout_constraintTop_toTopOf="@+id/character_image"
+        app:layout_constraintStart_toEndOf="@+id/character_image"
+        app:layout_constraintVertical_bias="0.25"
+        android:layout_marginStart="-35dp"
+        android:layout_marginTop="-40dp"/>
+    <TextView
+        android:id="@+id/numero_int"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:text="2"
+        android:layout_marginTop="@dimen/number_height"
+        android:textSize="@dimen/font_size"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/int_sig"
+        app:layout_constraintStart_toStartOf="@+id/hexagono2"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono2"
+        app:layout_constraintTop_toTopOf="@+id/hexagono2"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/inte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="intelecto"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/desc_size"
+        app:layout_constraintBottom_toTopOf="@id/int_sig"
+        android:layout_marginBottom="0dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/numero_int"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono2"
+        app:layout_constraintStart_toStartOf="@+id/hexagono2"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono2" />
+    <TextView
+        android:id="@+id/int_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INT"
+        android:textSize="@dimen/text_size"
+        android:fontFamily="@font/montserrat_black"
+        android:layout_marginBottom="@dimen/text_height"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/numero_int"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono2"
+        app:layout_constraintStart_toStartOf="@+id/hexagono2"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono2" />
+
+    <ImageView
+        android:id="@+id/hexagono3"
+        android:layout_width="@dimen/hex_side"
+        android:layout_height="@dimen/hex_side"
+        android:src="@drawable/hexagon_image"
+        android:contentDescription="Hexágono 3"
+        app:layout_constraintTop_toBottomOf="@+id/character_image"
+        app:layout_constraintStart_toEndOf="@+id/character_image"
+        android:layout_marginTop="-55dp"
+        android:layout_marginStart="-70dp" />
+    <TextView
+        android:id="@+id/num_pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:layout_marginTop="@dimen/number_height"
+        android:textSize="@dimen/font_size"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintBottom_toTopOf="@+id/pre_sig"
+        app:layout_constraintStart_toStartOf="@+id/hexagono4"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono4"
+        app:layout_constraintTop_toTopOf="@+id/hexagono4"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="presença"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/desc_size"
+        app:layout_constraintBottom_toTopOf="@id/pre_sig"
+        android:layout_marginBottom="0dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_pre"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono4"
+        app:layout_constraintStart_toStartOf="@+id/hexagono4"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono4" />
+    <TextView
+        android:id="@+id/pre_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRE"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/text_size"
+        android:layout_marginBottom="@dimen/text_height"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_pre"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono4"
+        app:layout_constraintStart_toStartOf="@+id/hexagono4"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono4" />
+
+    <ImageView
+        android:id="@+id/hexagono4"
+        android:layout_width="@dimen/hex_side"
+        android:layout_height="@dimen/hex_side"
+        android:src="@drawable/hexagon_image"
+        android:contentDescription="Hexágono 4"
+        app:layout_constraintTop_toBottomOf="@+id/character_image"
+        app:layout_constraintEnd_toStartOf="@+id/character_image"
+        android:layout_marginTop="-55dp"
+        android:layout_marginEnd="-70dp" />
+    <TextView
+        android:id="@+id/num_vig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:text="3"
+        android:layout_marginTop="@dimen/number_height"
+        android:textSize="@dimen/font_size"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vig_sig"
+        app:layout_constraintStart_toStartOf="@+id/hexagono3"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono3"
+        app:layout_constraintTop_toTopOf="@+id/hexagono3"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/vig"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/montserrat_black"
+        android:layout_height="wrap_content"
+        android:text="vigor"
+        android:textSize="@dimen/desc_size"
+        app:layout_constraintBottom_toTopOf="@id/vig_sig"
+        android:layout_marginBottom="0dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_vig"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono3"
+        app:layout_constraintStart_toStartOf="@+id/hexagono3"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono3" />
+    <TextView
+        android:id="@+id/vig_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIG"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/text_size"
+        android:layout_marginBottom="@dimen/text_height"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/num_vig"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono3"
+        app:layout_constraintStart_toStartOf="@+id/hexagono3"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono3" />
+
+    <ImageView
+        android:id="@+id/hexagono5"
+        android:layout_width="@dimen/hex_side"
+        android:layout_height="@dimen/hex_side"
+        android:layout_marginEnd="-35dp"
+        android:layout_marginTop="-40dp"
+        android:contentDescription="Hexágono 5"
+        android:src="@drawable/hexagon_image"
+        app:layout_constraintEnd_toStartOf="@+id/character_image"
+        app:layout_constraintTop_toTopOf="@+id/character_image" />
+
+    <TextView
+        android:id="@+id/numero_for"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:fontFamily="@font/montserrat_black"
+        android:layout_marginTop="@dimen/number_height"
+        android:textSize="@dimen/font_size"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/int_sig"
+        app:layout_constraintStart_toStartOf="@+id/hexagono5"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono5"
+        app:layout_constraintTop_toTopOf="@+id/hexagono5"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <TextView
+        android:id="@+id/forc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="força"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/desc_size"
+        app:layout_constraintBottom_toTopOf="@id/for_sig"
+        android:layout_marginBottom="0dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@+id/numero_int"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono5"
+        app:layout_constraintStart_toStartOf="@+id/hexagono5"
+        app:layout_constraintEnd_toEndOf="@+id/hexagono5" />
+    <TextView
+        android:id="@+id/for_sig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FOR"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="@dimen/text_size"
+        android:layout_marginBottom="@dimen/text_height"
+        android:textColor="@android:color/black"
+
+        app:layout_constraintTop_toBottomOf="@+id/numero_for"
+        app:layout_constraintBottom_toBottomOf="@+id/hexagono5"
+        app:layout_constraintStart_toStartOf="@+id/hexagono5"
+
+        app:layout_constraintEnd_toEndOf="@+id/hexagono5" />
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/character_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="280dp"
+        android:src="@drawable/emptycharacter"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[NOME DO PERSONAGEM]"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/barra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guide"
+        app:layout_constrainedWidth="true"
+        android:gravity="start"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="[NOME DO JOGADOR]"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/barra"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="end"
+        />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/canva"
+        app:layout_constraintBottom_toBottomOf="@id/character_image"
+        app:layout_constraintTop_toTopOf="@id/character_image"
+        app:layout_constraintEnd_toEndOf="@id/character_image"
+        app:layout_constraintStart_toStartOf="@id/character_image"
+        />
+
+    <ImageView
+        android:id="@+id/barra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/barra"
+        app:flow_horizontalBias="0.0"
+        android:layout_marginTop="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="668dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <ImageView
+        android:id="@+id/nex_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="0.3"
+        android:src="@drawable/box"
+        app:layout_constraintEnd_toStartOf="@id/hcg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vcg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
