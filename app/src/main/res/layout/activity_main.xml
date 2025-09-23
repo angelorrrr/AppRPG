@@ -7,6 +7,7 @@
     android:background="#FFFFF"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/wallpaper"
         android:layout_width="wrap_content"
@@ -362,7 +363,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.87" />
+        app:layout_constraintGuide_percent="0.82" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/hcg"
         android:layout_width="wrap_content"
@@ -371,16 +372,31 @@
         app:layout_constraintGuide_percent="0.5"
         />
 
+    <!-- caixa 1 de pv-->
+    <TextView
+        android:id="@+id/pv_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/pvData"
+        app:layout_constraintEnd_toEndOf="@id/circle1"
+        app:layout_constraintTop_toTopOf="@id/vcg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="[         ]"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black"
+        />
+
     <ImageView
         android:id="@+id/circle1"
-        android:layout_width="177dp"
-        android:layout_height="72dp"
-        android:src="@drawable/attribute_circle"
-        app:layout_constraintBottom_toTopOf="@id/vcg"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/sup_esq_1"
+        app:layout_constraintTop_toBottomOf="@id/vcg"
         app:layout_constraintEnd_toStartOf="@id/hcg" />
     <TextView
         android:id="@+id/pvText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/circle1"
         app:layout_constraintTop_toTopOf="@id/circle1"
@@ -389,17 +405,187 @@
         android:textColor="@color/white"
         android:fontFamily="@font/montserrat_black"
         android:textSize="27sp"
-        android:layout_marginStart="27dp"/>
+        android:layout_marginStart="8dp"/>
+    <ImageView
+        android:id="@+id/pvData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sup_esq_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/circle1"
+        android:foregroundGravity="top"
+        app:layout_constraintTop_toBottomOf="@id/vcg"
+        app:layout_constraintBottom_toBottomOf="@id/circle1"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="pontos de vida"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@id/pvText"
+        app:layout_constraintEnd_toEndOf="@id/circle1"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintTop_toTopOf="@id/pvText"
+        app:layout_constraintBottom_toBottomOf="@id/pvText"
+        />
 
-
+    <!-- caixa 2 de pe-->
+    <TextView
+        android:id="@+id/pe_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/peData"
+        app:layout_constraintEnd_toEndOf="@id/circle3"
+        app:layout_constraintTop_toTopOf="@id/circle3"
+        app:layout_constraintBottom_toBottomOf="@id/vcg"
+        android:text="[         ]"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black"
+        />
 
     <ImageView
-        android:id="@+id/nex_view"
+        android:id="@+id/circle3"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/sup_esq_1"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@id/vcg"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/peText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="0.3"
-        android:src="@drawable/box"
-        app:layout_constraintEnd_toStartOf="@id/hcg"
+        app:layout_constraintStart_toStartOf="@id/circle3"
+        app:layout_constraintTop_toTopOf="@id/circle3"
+        app:layout_constraintBottom_toBottomOf="@id/circle3"
+        android:text="PE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="27sp"
+        android:layout_marginStart="8dp"/>
+    <ImageView
+        android:id="@+id/peData"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sup_esq_2"
+        app:layout_constraintStart_toStartOf="@id/hcg"
+        app:layout_constraintEnd_toStartOf="@id/circle3"
+        android:foregroundGravity="top"
+        app:layout_constraintBottom_toBottomOf="@id/circle3"
+        app:layout_constraintTop_toTopOf="@id/circle3"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="pontos de esforço"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@id/peText"
+        app:layout_constraintEnd_toEndOf="@id/circle3"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintTop_toTopOf="@id/peText"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/peText"
+        />
+
+    <!-- caixa 3 de nex-->
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/nex_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/vcg" />
+        app:layout_constraintBottom_toBottomOf="@id/vcg"
+        />
+    <TextView
+        android:id="@+id/nexText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle4"
+        app:layout_constraintTop_toTopOf="@id/circle4"
+        app:layout_constraintBottom_toBottomOf="@id/circle4"
+        android:text="NEX"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="27sp"
+        android:layout_marginStart="8dp"/>
+    <ImageView
+        android:id="@+id/last_nex"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nex_3"
+        app:layout_constraintStart_toStartOf="@id/circle4"
+        app:layout_constraintEnd_toStartOf="@id/peData"
+        app:layout_constraintBottom_toBottomOf="@id/circle4"
+        app:layout_constraintTop_toTopOf="@id/circle4"/>
+
+
+    <!-- caixa 4 de san-->
+    <TextView
+        android:id="@+id/san_box"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/sanData"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        app:layout_constraintTop_toTopOf="@id/vcg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="[         ]"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/sanData"
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/san_box"
+        app:layout_constraintTop_toBottomOf="@id/vcg"
+        app:layout_constraintStart_toStartOf="@id/hcg"
+
+        />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/san_box_2"
+        app:layout_constraintStart_toEndOf="@id/sanData"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:foregroundGravity="top"
+        android:layout_marginStart="-3dp"
+        app:layout_constraintTop_toBottomOf="@id/vcg"
+        app:layout_constraintBottom_toBottomOf="@id/sanData"
+        />
+    <TextView
+        android:id="@+id/sanText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/circle2"
+        app:layout_constraintTop_toTopOf="@id/circle2"
+        android:text="SAN"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        android:textSize="22sp"
+        android:gravity="top"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="sanidade"
+        android:layout_marginTop="-13dp"
+        app:layout_constraintStart_toStartOf="@id/sanText"
+        app:layout_constraintEnd_toEndOf="@id/circle2"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_black"
+        app:layout_constraintTop_toBottomOf="@id/sanText"
+        />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
